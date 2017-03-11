@@ -5,12 +5,12 @@ return [
     /*
      * Laravel-admin name.
      */
-    'name'      => 'Laravel-admin',
+    'name'      => '单车后台管理',
 
     /*
      * Logo in admin panel header.
      */
-    'logo'      => '<b>Laravel</b> admin',
+    'logo'      => '<b>单车</b> 后台管理',
 
     /*
      * Mini-logo in admin panel header.
@@ -103,7 +103,7 @@ return [
     |               | skin-green                              |
     |---------------------------------------------------------|
      */
-    'skin'    => 'skin-blue',
+    'skin'    => 'skin-black',
 
     /*
     |---------------------------------------------------------|
