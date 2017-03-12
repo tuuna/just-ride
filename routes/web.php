@@ -19,3 +19,11 @@ Route::get('/','IndexController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/artlist','ArtlistController@index');
+
+Route::get('/single','ArticleController@show');
+
+Route::get('/image','ImageListController@index');
+
+Route::get('/page','PageController@index');

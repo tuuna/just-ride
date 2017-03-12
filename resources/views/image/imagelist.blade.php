@@ -1,41 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>童老师ThinkPHP5交流群：484519446</title>
-<meta name="description" content="童老师ThinkPHP5交流群：484519446" />
-<meta name="keywords" content="童老师ThinkPHP5交流群：484519446" />
-<link rel="stylesheet" type="text/css" media="all" href="../public/style/style.css" />
-    <script src="../public/style/jquery-1.4.1.min.js" type="text/javascript"></script>
-    <script src="../public/style/jquery.error.js" type="text/javascript"></script>
-    <script src="../public/style/jtemplates.js" type="text/javascript"></script>
-    <script src="../public/style/jquery.form.js" type="text/javascript"></script>
-    <script src="../public/style/lazy.js" type="text/javascript"></script>
-    <script type="text/javascript" src="../public/style/wp-sns-share.js"></script>
-    <script type="text/javascript" src="../public/style/voterajax.js"></script>
-    <script type="text/javascript" src="../public/style/userregister.js"></script>
-
-    <link rel="stylesheet" href="../public/style/votestyles.css" type="text/css" />
-    <link rel="stylesheet" href="../public/style/voteitup.css" type="text/css" />
-    <link rel="stylesheet" href="../public/style/list.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>单车社区</title>
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
 </head>
 <body id="list_style_2" class="list_style_2">
-   <script>
- function subForm()
- {
+<script>
+    function subForm()
+    {
 
- formsearch.submit();
- //form1为form的id
- }
- </script>
+        formsearch.submit();
+        //form1为form的id
+    }
+</script>
 <script type="text/javascript">
     function showMask() {
         $("#mask").css("height", $(document).height());
         $("#mask").css("width", $(document).width());
         $("#mask").show();
-    }  
+    }
 </script>
-<div id="mask" class="mask" onclick="CloseMask()"></div> 
+<div id="mask" class="mask" onclick="CloseMask()"></div>
 <div id="header_wrap">
     <div id="header">
         <div style="float: left; width: 310px;">
@@ -47,66 +33,66 @@
         </div>
         <div id="navi">
 
-<ul id="jsddm">
-<li><a class="navi_home" href="/">首页</a></li>
-<li><a href="/lookbike/">单车分类</a>
-<ul>
+            <ul id="jsddm">
+                <li><a class="navi_home" href="/">首页</a></li>
+                <li><a href="/lookbike/">单车分类</a>
+                    <ul>
 
-<li><a href="/lookbike/fixed-gear/">死飞车</a></li>
+                        <li><a href="/lookbike/fixed-gear/">死飞车</a></li>
 
-<li><a href="/lookbike/vintagebicycle/">复古骑行</a></li>
+                        <li><a href="/lookbike/vintagebicycle/">复古骑行</a></li>
 
-<li><a href="/lookbike/roadbicycle/">公路车</a></li>
+                        <li><a href="/lookbike/roadbicycle/">公路车</a></li>
 
-<li><a href="/lookbike/mountainbike/">山地车</a></li>
+                        <li><a href="/lookbike/mountainbike/">山地车</a></li>
 
-<li><a href="/lookbike/small/">折叠/小径车</a></li>
+                        <li><a href="/lookbike/small/">折叠/小径车</a></li>
 
-<li><a href="/lookbike/bmx/">BMX</a></li>
+                        <li><a href="/lookbike/bmx/">BMX</a></li>
 
-<li><a href="/lookbike/otherbike/">城市车及其他</a></li>
-
-
-</ul>
-
- </li2><li><a href="/gear/">骑行装备</a>
-<ul>
-
-<li><a href="/gear/accessories/">车身装备</a></li>
-
-<li><a href="/gear/rs/">人身装备</a></li>
+                        <li><a href="/lookbike/otherbike/">城市车及其他</a></li>
 
 
-</ul>
+                    </ul>
 
- </li2><li><a href="/life/">单车生活</a>
+                    </li2><li><a href="/gear/">骑行装备</a>
+                    <ul>
+
+                        <li><a href="/gear/accessories/">车身装备</a></li>
+
+                        <li><a href="/gear/rs/">人身装备</a></li>
 
 
+                    </ul>
 
-
-
- </li2><li><a href="/news/">行业资讯</a>
+                    </li2><li><a href="/life/">单车生活</a>
 
 
 
 
 
- </li2>
+                    </li2><li><a href="/news/">行业资讯</a>
 
-</ul>
+
+
+
+
+                    </li2>
+
+            </ul>
 
             <div style="clear: both;">
             </div>
 
-            
+
         </div>
         <div style="float: right; width: 209px;">
             <div class="widget" style="height: 30px; padding-top: 20px;">
                 <div style="float: left;">
-      <form  name="formsearch" action="/plus/search.php"><input type="hidden" name="kwtype" value="0" />                
-<input name="q" type="text" style="background-color: #000000;padding-left: 10px; font-size: 12px;font-family: 'Microsoft Yahei'; color: #999999;height: 29px; width: 160px; border: solid 1px #666666; line-height: 28px;" id="go" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
-        </form>
-                        </div>
+                    <form  name="formsearch" action="/plus/search.php"><input type="hidden" name="kwtype" value="0" />
+                        <input name="q" type="text" style="background-color: #000000;padding-left: 10px; font-size: 12px;font-family: 'Microsoft Yahei'; color: #999999;height: 29px; width: 160px; border: solid 1px #666666; line-height: 28px;" id="go" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+                    </form>
+                </div>
                 <div style="float: left;">
                     <img src="../public/images/search-new.png" id="imgSearch" style="cursor: pointer; margin: 0px;
                         padding: 0px;" onclick="subForm()"  /></div>
@@ -114,13 +100,13 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>
 
 </div>
-    <div id="wrapper">
-           
+<div id="wrapper">
+
     <style type="text/css">
         body
         {
@@ -178,7 +164,7 @@
         {
             vertical-align: middle;
         }
-        
+
         div
         {
             color: #666666;
@@ -186,15 +172,15 @@
         #menu-item-196 a.a,#menu-item-198 a.a,#menu-item-197 a.a{color: #00BBEE;}
         #menu-item-198{ background-image:url('../public/images/up-arrow.png'); background-position: center bottom; background-repeat:no-repeat;}
         .boxBor{
-    position:absolute;left:0;top:0;display:none;z-index:9999; background-color:#ffffff;opacity: 0.3;filter:alpha(opacity=30)
-}
+            position:absolute;left:0;top:0;display:none;z-index:9999; background-color:#ffffff;opacity: 0.3;filter:alpha(opacity=30)
+        }
 
     </style>
     <div id="xh_container">
 
-        
-<div class="xh_265x265x00">
-    <div style="float: left; width: 343px; height: 293px; background-color: #ffffff;
+
+        <div class="xh_265x265x00">
+            <div style="float: left; width: 343px; height: 293px; background-color: #ffffff;
                 border: solid 1px #ccc; margin-left: 15px;margin-top: 15px;">
                 <div style="background-color: #cccccc; width: 313px; height: 188px; margin-top: 16px;
                     margin-left: 14px;">
@@ -203,8 +189,8 @@
                 <div style="margin-left: 14px; line-height: 25px; margin-top: 10px;">
                     <div style="font-size: 12px;color:#cccccc;">2014年02月06日</div>
                     <div style="font-size: 14px;height:45px;">
-                       <a target="_blank" href="/life/416.html">COACH再度携手王力宏 踩单车演绎2013秋冬男士纽约风尚</a></div>
-                    
+                        <a target="_blank" href="/life/416.html">COACH再度携手王力宏 踩单车演绎2013秋冬男士纽约风尚</a></div>
+
                 </div>
             </div><div style="float: left; width: 343px; height: 293px; background-color: #ffffff;
                 border: solid 1px #ccc; margin-left: 15px;margin-top: 15px;">
@@ -215,8 +201,8 @@
                 <div style="margin-left: 14px; line-height: 25px; margin-top: 10px;">
                     <div style="font-size: 12px;color:#cccccc;">2014年02月06日</div>
                     <div style="font-size: 14px;height:45px;">
-                       <a target="_blank" href="/life/392.html">骑看世界：三个女孩的欧洲骑行之路</a></div>
-                    
+                        <a target="_blank" href="/life/392.html">骑看世界：三个女孩的欧洲骑行之路</a></div>
+
                 </div>
             </div><div style="float: left; width: 343px; height: 293px; background-color: #ffffff;
                 border: solid 1px #ccc; margin-left: 15px;margin-top: 15px;">
@@ -227,8 +213,8 @@
                 <div style="margin-left: 14px; line-height: 25px; margin-top: 10px;">
                     <div style="font-size: 12px;color:#cccccc;">2014年02月06日</div>
                     <div style="font-size: 14px;height:45px;">
-                       <a target="_blank" href="/life/395.html">骑看世界：探索地中海科西嘉岛</a></div>
-                    
+                        <a target="_blank" href="/life/395.html">骑看世界：探索地中海科西嘉岛</a></div>
+
                 </div>
             </div><div style="float: left; width: 343px; height: 293px; background-color: #ffffff;
                 border: solid 1px #ccc; margin-left: 15px;margin-top: 15px;">
@@ -239,8 +225,8 @@
                 <div style="margin-left: 14px; line-height: 25px; margin-top: 10px;">
                     <div style="font-size: 12px;color:#cccccc;">2014年02月06日</div>
                     <div style="font-size: 14px;height:45px;">
-                       <a target="_blank" href="/life/361.html">骑行40000公里 英国胶片摄影师的骑游之旅</a></div>
-                    
+                        <a target="_blank" href="/life/361.html">骑行40000公里 英国胶片摄影师的骑游之旅</a></div>
+
                 </div>
             </div><div style="float: left; width: 343px; height: 293px; background-color: #ffffff;
                 border: solid 1px #ccc; margin-left: 15px;margin-top: 15px;">
@@ -251,8 +237,8 @@
                 <div style="margin-left: 14px; line-height: 25px; margin-top: 10px;">
                     <div style="font-size: 12px;color:#cccccc;">2014年02月06日</div>
                     <div style="font-size: 14px;height:45px;">
-                       <a target="_blank" href="/life/394.html">骑看世界：春节骑行海南岛 畅游冬日骑行天堂</a></div>
-                    
+                        <a target="_blank" href="/life/394.html">骑看世界：春节骑行海南岛 畅游冬日骑行天堂</a></div>
+
                 </div>
             </div><div style="float: left; width: 343px; height: 293px; background-color: #ffffff;
                 border: solid 1px #ccc; margin-left: 15px;margin-top: 15px;">
@@ -263,8 +249,8 @@
                 <div style="margin-left: 14px; line-height: 25px; margin-top: 10px;">
                     <div style="font-size: 12px;color:#cccccc;">2014年02月06日</div>
                     <div style="font-size: 14px;height:45px;">
-                       <a target="_blank" href="/life/364.html">隆猫西班牙自行车之旅-Mallorca岛梦幻旅程（上）</a></div>
-                    
+                        <a target="_blank" href="/life/364.html">隆猫西班牙自行车之旅-Mallorca岛梦幻旅程（上）</a></div>
+
                 </div>
             </div><div style="float: left; width: 343px; height: 293px; background-color: #ffffff;
                 border: solid 1px #ccc; margin-left: 15px;margin-top: 15px;">
@@ -275,8 +261,8 @@
                 <div style="margin-left: 14px; line-height: 25px; margin-top: 10px;">
                     <div style="font-size: 12px;color:#cccccc;">2014年02月06日</div>
                     <div style="font-size: 14px;height:45px;">
-                       <a target="_blank" href="/life/393.html">复古骑行上海，听法国大梧桐诉说旧日故事</a></div>
-                    
+                        <a target="_blank" href="/life/393.html">复古骑行上海，听法国大梧桐诉说旧日故事</a></div>
+
                 </div>
             </div><div style="float: left; width: 343px; height: 293px; background-color: #ffffff;
                 border: solid 1px #ccc; margin-left: 15px;margin-top: 15px;">
@@ -287,8 +273,8 @@
                 <div style="margin-left: 14px; line-height: 25px; margin-top: 10px;">
                     <div style="font-size: 12px;color:#cccccc;">2014年02月06日</div>
                     <div style="font-size: 14px;height:45px;">
-                       <a target="_blank" href="/life/389.html">执着的小辫与西藏的骑车旅行</a></div>
-                    
+                        <a target="_blank" href="/life/389.html">执着的小辫与西藏的骑车旅行</a></div>
+
                 </div>
             </div><div style="float: left; width: 343px; height: 293px; background-color: #ffffff;
                 border: solid 1px #ccc; margin-left: 15px;margin-top: 15px;">
@@ -299,8 +285,8 @@
                 <div style="margin-left: 14px; line-height: 25px; margin-top: 10px;">
                     <div style="font-size: 12px;color:#cccccc;">2014年02月06日</div>
                     <div style="font-size: 14px;height:45px;">
-                       <a target="_blank" href="/life/390.html">大理洱海骑行 到挖色赶个大集</a></div>
-                    
+                        <a target="_blank" href="/life/390.html">大理洱海骑行 到挖色赶个大集</a></div>
+
                 </div>
             </div><div style="float: left; width: 343px; height: 293px; background-color: #ffffff;
                 border: solid 1px #ccc; margin-left: 15px;margin-top: 15px;">
@@ -311,8 +297,8 @@
                 <div style="margin-left: 14px; line-height: 25px; margin-top: 10px;">
                     <div style="font-size: 12px;color:#cccccc;">2014年02月06日</div>
                     <div style="font-size: 14px;height:45px;">
-                       <a target="_blank" href="/life/391.html">KONA 29寸车骑游哥伦比亚</a></div>
-                    
+                        <a target="_blank" href="/life/391.html">KONA 29寸车骑游哥伦比亚</a></div>
+
                 </div>
             </div><div style="float: left; width: 343px; height: 293px; background-color: #ffffff;
                 border: solid 1px #ccc; margin-left: 15px;margin-top: 15px;">
@@ -323,8 +309,8 @@
                 <div style="margin-left: 14px; line-height: 25px; margin-top: 10px;">
                     <div style="font-size: 12px;color:#cccccc;">2014年02月06日</div>
                     <div style="font-size: 14px;height:45px;">
-                       <a target="_blank" href="/life/386.html">Cyclist:赵勇权传授台湾环岛骑行摄影经验</a></div>
-                    
+                        <a target="_blank" href="/life/386.html">Cyclist:赵勇权传授台湾环岛骑行摄影经验</a></div>
+
                 </div>
             </div><div style="float: left; width: 343px; height: 293px; background-color: #ffffff;
                 border: solid 1px #ccc; margin-left: 15px;margin-top: 15px;">
@@ -335,22 +321,22 @@
                 <div style="margin-left: 14px; line-height: 25px; margin-top: 10px;">
                     <div style="font-size: 12px;color:#cccccc;">2014年02月06日</div>
                     <div style="font-size: 14px;height:45px;">
-                       <a target="_blank" href="/life/387.html">两个青海 骑行在3197米之上</a></div>
-                    
+                        <a target="_blank" href="/life/387.html">两个青海 骑行在3197米之上</a></div>
+
                 </div>
             </div>
- 
-           
-        
-    <div style="clear: both;">
-    </div>
-                <div id="pagination"><div class="wp-pagenavi">
-                <span class="current">1</span><a class="page larger" href='list_2.html'>2</a><a class="page larger" href='list_3.html'>3</a><a class="page larger" href='list_2.html'>下一页</a><a class="page larger" href='list_3.html'>末页</a><span class="pages">共 3 页，36条</span>
 
-                </div></div>    
-</div>
 
-        
+
+            <div style="clear: both;">
+            </div>
+            <div id="pagination"><div class="wp-pagenavi">
+                    <span class="current">1</span><a class="page larger" href='list_2.html'>2</a><a class="page larger" href='list_3.html'>3</a><a class="page larger" href='list_2.html'>下一页</a><a class="page larger" href='list_3.html'>末页</a><span class="pages">共 3 页，36条</span>
+
+                </div></div>
+        </div>
+
+
 
 
     </div>
@@ -361,48 +347,48 @@
         $(".more0").hover(function () { $(this).attr("src", "./style/simg/more-o.png"); }, function () { $(this).attr("src", "./style/simg/more.png"); });
     </script>
     <div class="boxBor"></div>
-    
+
     <input type="hidden" id="hdBoxbor" />
     <div class="boxBor" onclick="IBoxBor()" style="cursor:pointer;"></div>
 
 
-    </div>
+</div>
 <script type="text/javascript">
-        $(function () {
-            var imgHoverSetTimeOut = null;
-            $('.xh_265x265x00 img').hover(function () {
-                var oPosition = $(this).offset();
-                var oThis = $(this);
-                $(".boxBor").css({
-                    left: oPosition.left,
-                    top: oPosition.top,
-                    width: oThis.width(),
-                    height: oThis.height()
-                });
-                $(".boxBor").show();
-                var urlText = $(this).parent().attr("href");
-                $("#hdBoxbor").val(urlText);
-            }, function () {
-                imgHoverSetTimeOut = setTimeout(function () { $(".boxBor").hide(); }, 500);
+    $(function () {
+        var imgHoverSetTimeOut = null;
+        $('.xh_265x265x00 img').hover(function () {
+            var oPosition = $(this).offset();
+            var oThis = $(this);
+            $(".boxBor").css({
+                left: oPosition.left,
+                top: oPosition.top,
+                width: oThis.width(),
+                height: oThis.height()
             });
-            $(".boxBor").hover(
-                function () {
-                    clearTimeout(imgHoverSetTimeOut);
-                }
-                , function () {
-                    $(".boxBor").hide();
-                }
-            );
+            $(".boxBor").show();
+            var urlText = $(this).parent().attr("href");
+            $("#hdBoxbor").val(urlText);
+        }, function () {
+            imgHoverSetTimeOut = setTimeout(function () { $(".boxBor").hide(); }, 500);
         });
-        function IBoxBor() {
-            window.open($("#hdBoxbor").val());
-        }
-        function goanewurl() {
-            window.open($("#hdUrlFocus").val());
-        }
+        $(".boxBor").hover(
+            function () {
+                clearTimeout(imgHoverSetTimeOut);
+            }
+            , function () {
+                $(".boxBor").hide();
+            }
+        );
+    });
+    function IBoxBor() {
+        window.open($("#hdBoxbor").val());
+    }
+    function goanewurl() {
+        window.open($("#hdUrlFocus").val());
+    }
 </script>
 
-    
+
 <div id="footer_wrap">
     <div id="footer">
         <div class="footer_navi">
@@ -413,7 +399,7 @@
                     <a href="/news/">行业资讯</a></li>
                 <li id="menu-item-158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-158">
                     <a href="/tougao.html">我要投稿</a></li>
-            
+
             </ul>
         </div>
         <div class="footer_info">
@@ -424,7 +410,7 @@
 </div>
 <div style="display: none;" id="scroll">
 </div>
-<script type="text/javascript" src="../public/style/z700bike_global.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 
 </body>
 </html>
