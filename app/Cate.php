@@ -12,7 +12,7 @@ class Cate extends Model
 
     protected $table = 'cates';
 
-    protected $fillable = ['title','parent_id','order'];
+    protected $fillable = ['title','parent_id','order','level'];
 
     /*public function __construct(array $attributes = [])
     {

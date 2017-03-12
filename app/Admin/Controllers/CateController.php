@@ -87,6 +87,8 @@ class CateController extends Controller
     protected function form()
     {
         return Admin::form(Cate::class, function (Form $form) {
+
+            $form->display('id', 'ID');
             $form->select('parent_id','所属分类')->options(function () {
                 $merge = [0 => '顶级分类'];
                 foreach (Cate::get() as $key => $cate) {
@@ -96,6 +98,13 @@ class CateController extends Controller
             });
             $form->text('title','分类名')->placeholder('请输入分类名');
             $form->display('created_at', 'Created At');
+            $form->saved(function (Form $form) {
+                if(Cate::find($form->parent_id))
+                    $this->level = Cate::where(['id' => $form->parent_id])->first()->level + 1;
+                else
+                    $this->level = 0;
+                return Cate::where('id',Cate::orderBy('id','DESC')->first()->id)->update(['level' => $this->level]);
+            });
         });
     }
 }

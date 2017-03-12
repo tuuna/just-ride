@@ -17,6 +17,7 @@ class CreateCatesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->smallInteger('parent_id')->default(0);
+            $table->smallInteger('level')->default(0);
             $table->integer('order')->default(0);
             $table->timestamps();
         });
