@@ -12,7 +12,8 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
     $router->resource('users', UserController::class);
-
+    $router->resource('cates',CateController::class);
+//    $router->get('cates','CateController@index');
 });
 
 

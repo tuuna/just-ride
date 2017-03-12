@@ -15,8 +15,9 @@ class CreateCatesTable extends Migration
     {
         Schema::create('cates', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('title');
             $table->smallInteger('parent_id')->default(0);
+            $table->integer('order')->default(0);
             $table->timestamps();
         });
     }
