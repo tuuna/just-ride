@@ -15,11 +15,18 @@ class IndexInfoRepository
 {
     public function getAllCategories()
     {
-        return tree(Cate::get());
+        return $this->tree(Cate::get());
     }
 
-    public function tree($data)
+    public function tree($data,$name='child',$parent_id = 0)
     {
-
+        $arr = array();
+        foreach ($data as $v) {
+            if ($v['parent_id'] == $parent_id) {
+                $v[$name] = self::tree($data, $name, $v['id']);
+                $arr[] = $v;
+            }
+        }
+        return $arr;
     }
 }

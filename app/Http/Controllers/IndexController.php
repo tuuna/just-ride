@@ -18,7 +18,9 @@ class IndexController extends Controller
 
     public function index()
     {
+
         $categories = $this->categories->getAllCategories();
-        return view('home.index');
+//        dd($categories[0]->child[0]->title);
+        return view('home.index',['categories' => $categories]);
     }
 }

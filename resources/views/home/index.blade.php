@@ -50,52 +50,17 @@
 
             <ul id="jsddm">
                 <li><a class="navi_home" href="/">首页</a></li>
-                <li><a href="/lookbike/">单车分类</a>
+                @foreach($categories as $cate)
+                <li>
+                    <a href="/lookbike/">{{$cate->title}}</a>
                     <ul>
-
-                        <li><a href="/lookbike/fixed-gear/">死飞车</a></li>
-
-                        <li><a href="/lookbike/vintagebicycle/">复古骑行</a></li>
-
-                        <li><a href="/lookbike/roadbicycle/">公路车</a></li>
-
-                        <li><a href="/lookbike/mountainbike/">山地车</a></li>
-
-                        <li><a href="/lookbike/small/">折叠/小径车</a></li>
-
-                        <li><a href="/lookbike/bmx/">BMX</a></li>
-
-                        <li><a href="/lookbike/otherbike/">城市车及其他</a></li>
-
-
+                        @foreach($cate->child as $v)
+                        <li><a href="/lookbike/fixed-gear/">{{$v->title}}</a></li>
+                        @endforeach
                     </ul>
-
-                    </li2><li><a href="/gear/">骑行装备</a>
-                    <ul>
-
-                        <li><a href="/gear/accessories/">车身装备</a></li>
-
-                        <li><a href="/gear/rs/">人身装备</a></li>
-
-
-                    </ul>
-
-                    </li2><li><a href="/life/">单车生活</a>
-
-
-
-
-
-                    </li2><li><a href="/news/">行业资讯</a>
-
-
-
-
-
-                    </li2>
-
+                    </li>
+                @endforeach
             </ul>
-
             <div style="clear: both;">
             </div>
 
@@ -167,27 +132,7 @@
         <a name="new"></a>
         <div id="xh_content" style="padding-right:10px;">
             <div class="xh_area_h_3">
-                <div class="xh_area_title">
-                    <a href="javascript:" class="t">New 最近更新</a> <span class="r">
-
-                    <a href='/lookbike/fixed-gear/'>死飞车</a>
-
-                    <a href='/lookbike/vintagebicycle/'>复古骑行</a>
-
-                    <a href='/lookbike/roadbicycle/'>公路车</a>
-
-                    <a href='/lookbike/mountainbike/'>山地车</a>
-
-                    <a href='/lookbike/small/'>折叠/小径车</a>
-
-                    <a href='/lookbike/bmx/'>BMX</a>
-
-                    <a href='/lookbike/otherbike/'>城市车及其他</a>
-                     </span>
-                </div>
                 <br>
-
-
                 <div class="xh_post_h_3 ofh">
                     <div class="xh_265x265">
                         <a target="_blank" href="/life/392.html" title="骑看世界：三个女孩的欧洲骑行之路">

@@ -96,6 +96,9 @@ class UserController extends Controller
             $form->password('password','密码');
             $form->image('avatar');
             $form->hidden('confirmation_token')->value(str_random(40));
+            $form->saving(function (Form $form) {
+               $form->password = bcrypt($form->password);
+            });
         });
     }
 }
