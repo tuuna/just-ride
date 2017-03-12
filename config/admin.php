@@ -30,7 +30,7 @@ return [
     /*
      * Laravel-admin html title.
      */
-    'title'  => 'Admin',
+    'title'  => '单车后台管理',
 
     /*
      * Laravel-admin auth setting.

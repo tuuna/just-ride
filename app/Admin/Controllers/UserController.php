@@ -74,9 +74,12 @@ class UserController extends Controller
         return Admin::grid(User::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
-
-            $grid->created_at();
-            $grid->updated_at();
+            $grid->column('name','用户名');
+            $grid->email('邮件');
+            $grid->is_active('激活状态')->display(function ($is_active) {
+                return $is_active ? '是' : '否';
+            });
+            $grid->created_at('创建时间');
         });
     }
 
@@ -88,11 +91,11 @@ class UserController extends Controller
     protected function form()
     {
         return Admin::form(User::class, function (Form $form) {
-
-            $form->display('id', 'ID');
-
-            $form->display('created_at', 'Created At');
-            $form->display('updated_at', 'Updated At');
+            $form->text('name','用户名')->rules('required|min:2')->placeholder('请输入用户名');
+            $form->text('email','邮件');
+            $form->password('password','密码');
+            $form->image('avatar');
+            $form->hidden('confirmation_token')->value(str_random(40));
         });
     }
 }
