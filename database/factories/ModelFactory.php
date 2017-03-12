@@ -19,6 +19,8 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
+        'confirmation_token' => str_random(40),
+        'avatar' => '/images/default.png',
         'remember_token' => str_random(10),
     ];
 });
@@ -27,5 +29,17 @@ $factory->define(App\Cate::class, function (Faker\Generator $faker) {
 
     return [
         'title' => $faker->name,
+    ];
+});
+
+$factory->define(App\Article::class, function (Faker\Generator $faker) {
+
+    return [
+        'title' => $faker->name,
+        'content' => $faker->paragraph,
+        'author' => $faker->name,
+        'user_id' => 1,
+        'cate_id' => 1,
+        'like_id' => 1,
     ];
 });

@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Routing\Router;
 
 Admin::registerHelpersRoutes();
@@ -13,6 +14,7 @@ Route::group([
     $router->get('/', 'HomeController@index');
     $router->resource('users', UserController::class);
     $router->resource('cates',CateController::class);
+    $router->resource('articles',ArticleController::class);
 //    $router->get('cates','CateController@index');
 });
 

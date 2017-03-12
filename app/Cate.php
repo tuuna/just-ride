@@ -12,6 +12,8 @@ class Cate extends Model
 
     protected $table = 'cates';
 
+    protected $fillable = ['title','parent_id','order'];
+
     /*public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
@@ -20,4 +22,9 @@ class Cate extends Model
         $this->setOrderColumn('sort');
         $this->setTitleColumn('name');
     }*/
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
 }
