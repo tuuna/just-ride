@@ -101,6 +101,7 @@ class ArticleController extends Controller
                 }
                 return $merge;
             });
+            $form->image('pic');
             $form->editor('content');
             $form->hidden('user_id')->value(1);
             $form->hidden('like_id')->value(1);

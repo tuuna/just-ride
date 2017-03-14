@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string('title');
             $table->string('author');
             $table->text('content');
+            $table->string('pic',60)->default('/images/default.png');
             $table->integer('click_count')->default(1);
             $table->integer('favor_count')->default(0);
             $table->integer('user_id')->unsigned();

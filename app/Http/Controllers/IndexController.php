@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
+use App\Cate;
 use App\Repositories\IndexInfoRepository;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class IndexController extends AppController
 {
     protected $articles,$categories;
 
@@ -18,9 +20,9 @@ class IndexController extends Controller
 
     public function index()
     {
-
-        $categories = $this->categories->getAllCategories();
-//        dd($categories[0]->child[0]->title);
-        return view('home.index',['categories' => $categories]);
+//        $model = Article::all();
+        $articles = Article::with('cate')->paginate(4);
+        $categories = $this->parent();
+        return view('home.index',['categories' => $categories,'articles' => $articles]);
     }
 }

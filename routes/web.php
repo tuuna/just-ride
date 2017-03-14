@@ -20,9 +20,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/artlist','ArtlistController@index');
+Route::get('/artlist/{id}','ArtlistController@index');
 
-Route::get('/single','ArticleController@show');
+Route::get('/single/{id}','ArticleController@show');
 
 Route::get('/image','ImageListController@index');
 

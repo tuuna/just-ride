@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class ArticleController extends AppController
 {
-    public function show()
+    public function show($id)
     {
-        return view('article.single');
+        $details = Article::with('cate')->where('id',$id)->get()->toArray();
+        $categories = $this->parent();
+        return view('article.single',['details' => $details,'categories' => $categories]);
     }
 }
