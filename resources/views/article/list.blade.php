@@ -44,30 +44,14 @@
                 <div style="background: url('../public/style/img/hots_bg.png') no-repeat scroll 0 0 transparent;width:250px;height:52px;margin-bottom:15px;">
                 </div>
                 <ul id="ulHot">
-
+                    @foreach($newest as $new)
+                        @foreach($new['articles'] as $v)
                     <li style="border-bottom:dashed 1px #ccc;height:70px; margin-bottom:15px;">
-                        <div style="float:left;width:85px;height:55px; overflow:hidden;"><a href="/lookbike/roadbicycle/110.html" target="_blank"><img src="../public/images/68.png" width="83" title="环西冠军克里斯霍纳的个性化定制座驾 Trek Madone公路车" /></a></div>
-                        <div style="float:right;width:145px;height:52px; overflow:hidden;"><a href="/lookbike/roadbicycle/110.html" target="_blank" title="环西冠军克里斯霍纳的个性化定制座驾 Trek Madone公路车">环西冠军克里斯霍纳的个性化定制座驾 Trek Ma</a></div>
+                        <div style="float:left;width:85px;height:55px; overflow:hidden;"><a href="{{ url('single/'.$v['id']) }}"><img src="{{ asset($v['pic']) }}" width="83" title="{{ $v['title'] }}" /></a></div>
+                        <div style="float:right;width:145px;height:52px; overflow:hidden;"><a href="{{ url('single/'.$v['id']) }}" title="{{ $v['title'] }}">{{ $v['title'] }}</a></div>
                     </li>
-                    <li style="border-bottom:dashed 1px #ccc;height:70px; margin-bottom:15px;">
-                        <div style="float:left;width:85px;height:55px; overflow:hidden;"><a href="/lookbike/small/184.html" target="_blank"><img src="../public/images/146.jpg" width="83" title="英式折叠车Brompton Junction 上海旗舰店" /></a></div>
-                        <div style="float:right;width:145px;height:52px; overflow:hidden;"><a href="/lookbike/small/184.html" target="_blank" title="英式折叠车Brompton Junction 上海旗舰店">英式折叠车Brompton Junction 上海旗舰店</a></div>
-                    </li>
-                    <li style="border-bottom:dashed 1px #ccc;height:70px; margin-bottom:15px;">
-                        <div style="float:left;width:85px;height:55px; overflow:hidden;"><a href="/lookbike/vintagebicycle/57.html" target="_blank"><img src="../public/images/17.jpg" width="83" title="延时胶片摄影：上海复古骑行大会" /></a></div>
-                        <div style="float:right;width:145px;height:52px; overflow:hidden;"><a href="/lookbike/vintagebicycle/57.html" target="_blank" title="延时胶片摄影：上海复古骑行大会">延时胶片摄影：上海复古骑行大会</a></div>
-                    </li>
-                    <li style="border-bottom:dashed 1px #ccc;height:70px; margin-bottom:15px;">
-                        <div style="float:left;width:85px;height:55px; overflow:hidden;"><a href="/lookbike/small/199.html" target="_blank"><img src="../public/images/159.jpg" width="83" title="Brompton小布2012女王纪念版" /></a></div>
-                        <div style="float:right;width:145px;height:52px; overflow:hidden;"><a href="/lookbike/small/199.html" target="_blank" title="Brompton小布2012女王纪念版">Brompton小布2012女王纪念版</a></div>
-                    </li>
-                    <li style="border-bottom:dashed 1px #ccc;height:70px; margin-bottom:15px;">
-                        <div style="float:left;width:85px;height:55px; overflow:hidden;"><a href="/lookbike/bmx/213.html" target="_blank"><img src="../public/images/181.png" width="83" title="街头气息十足 Stussy 2013 秋冬系列新品LOOKBOOK" /></a></div>
-                        <div style="float:right;width:145px;height:52px; overflow:hidden;"><a href="/lookbike/bmx/213.html" target="_blank" title="街头气息十足 Stussy 2013 秋冬系列新品LOOKBOOK">街头气息十足 Stussy 2013 秋冬系列新品LOOKB</a></div>
-                    </li>
-
-
-
+                        @endforeach
+                    @endforeach
                 </ul>
             </div>
 
