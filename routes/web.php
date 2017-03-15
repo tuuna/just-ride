@@ -27,3 +27,8 @@ Route::get('/single/{id}','ArticleController@show');
 Route::get('/image','ImageListController@index');
 
 Route::get('/page','PageController@index');
+
+Route::get('items-lists', ['as'=>'items-lists','uses'=>'ItemSearchController@index']);
+Route::post('create-item', ['as'=>'create-item','uses'=>'ItemSearchController@create']);
+
+Route::get('email/verify/{token}',['as' => 'email.verify', 'uses' => 'EmailController@verify']);

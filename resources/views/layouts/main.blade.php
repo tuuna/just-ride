@@ -18,6 +18,7 @@
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
+        Laravel.apiToken = "{{ Auth::check() ? 'Bearer '.Auth::user()->api_token : 'Bearer ' }}"
     </script>
 </head>
 <body class="xh_body" >
@@ -46,6 +47,33 @@
                         </ul>
                     </li>
                 @endforeach
+                @if (Auth::guest())
+                    <li>|</li>
+                    <li><a href="{{ route('login') }}">登录</a></li>
+                    <li>|</li>
+                    <li><a href="{{ route('register') }}">注册</a></li>
+                @else
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    退出
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @endif
+
             </ul>
             <div style="clear: both;">
             </div>
@@ -62,9 +90,13 @@
                 <div style="float: left;">
                     <img src="{{ asset('images/search-new.png') }}" id="imgSearch" style="cursor: pointer; margin: 0px;
                         padding: 0px;" onclick="subForm()"  /></div>
+
+
                 <div style="clear: both;">
                 </div>
+
             </div>
+
         </div>
 
     </div>
@@ -79,9 +111,9 @@
             <div class="footer_navi">
                 <ul id="menu-%e5%b0%be%e9%83%a8%e5%af%bc%e8%88%aa" class="menu">
                     <li id="menu-item-156" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-156">
-                        <a href="/aboutus.html">关于我们</a></li>
+                        <a href="/page">关于我</a></li>
                     <li id="menu-item-157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157">
-                        <a href="/news/">行业资讯</a></li>
+                        <a href="/image">文章导航</a></li>
                     <li id="menu-item-158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-158">
                         <a href="/tougao.html">我要投稿</a></li>
                 </ul>

@@ -23,6 +23,8 @@ class IndexController extends AppController
 //        $model = Article::all();
         $articles = Article::with('cate')->paginate(4);
         $categories = $this->parent();
-        return view('home.index',['categories' => $categories,'articles' => $articles]);
+        $listInfo = Article::all()->toArray();
+        $newest = array_slice(array_reverse($listInfo),0,4);
+        return view('home.index',['categories' => $categories,'articles' => $articles,'newest' => $newest]);
     }
 }

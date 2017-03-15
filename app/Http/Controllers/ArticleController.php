@@ -11,6 +11,7 @@ class ArticleController extends AppController
     {
         $details = Article::with('cate')->where('id',$id)->get()->toArray();
         $categories = $this->parent();
+        Article::find($id)->increment('click_count');
         return view('article.single',['details' => $details,'categories' => $categories]);
     }
 }

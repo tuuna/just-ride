@@ -23,6 +23,10 @@ class ArtlistController extends AppController
         $paginator = new LengthAwarePaginator($listInfo,$count,4);
         $newest = array_slice(array_reverse($listInfo),0,4);
         $categories = $this->parent();
-        return view('article.list',['categories' => $categories,'listInfo' => $listInfo,'newest' => $newest,'paginator' => $paginator]);
+        return view('article.list',
+                ['categories' => $categories,
+                'listInfo' => $listInfo,
+                'newest' => $newest,
+                'paginator' => $paginator]);
     }
 }

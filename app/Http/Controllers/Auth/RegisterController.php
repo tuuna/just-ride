@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Mailer\Mailer;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -27,16 +28,17 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
+    protected $emailVerify;
 
     /**
-     * Create a new controller instance.
-     *
-     * @return void
+     * RegisterController constructor.
+     * @param Mailer $emailVerify
      */
-    public function __construct()
+    public function __construct(Mailer $emailVerify)
     {
         $this->middleware('guest');
+        $this->emailVerify = $emailVerify;
     }
 
     /**
@@ -62,10 +64,28 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'avatar' => '/images/default_avatar.png',
+            'confirmation_token' => str_random(40),
+            'remember_token' => str_random(10),
+            'api_token' => str_random(60)
         ]);
+
+        $this->sendVerifyEmailTo($user);
+        return $user;
     }
+
+    private function sendVerifyEmailTo($user)
+    {
+        $data = [
+            'url' => route('email.verify',['token' => $user->confirmation_token]),
+            'name' => $user->name
+        ];
+        $this->emailVerify->sendTo('emails.welcome',$data,$user->email,'请激活您的邮件');
+    }
+
+
 }

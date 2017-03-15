@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PageController extends Controller
+class PageController extends AppController
 {
     public function index()
     {
-        return view('page.page');
+        $categories = $this->parent();
+        return view('page.page',compact('categories'));
     }
 }
