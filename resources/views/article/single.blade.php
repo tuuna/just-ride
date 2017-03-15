@@ -82,7 +82,7 @@
 
             <div id="sidebar">
 
-                <like-button article_id="{{ $details[0]['id'] }}"></like-button>
+                <like-this-button article_id="{{ $details[0]['id'] }}"></like-this-button>
                 {{--<div class="widget single" style="margin-bottom: 0px; margin-left: 0px; margin-top: 40px;
                     padding-bottom: 0px;" id="newdigg">
                     --}}{{--<div class="single_views"">--}}{{--
