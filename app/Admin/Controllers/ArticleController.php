@@ -76,7 +76,7 @@ class ArticleController extends Controller
 
             $grid->id('ID')->sortable();
             $grid->column('title','文章标题');
-            $grid->user()->name('作者');
+            $grid->column('author','作者');
             $grid->column('content','文章内容');
             $grid->cate()->title('所属分类');
             $grid->created_at();
@@ -103,9 +103,7 @@ class ArticleController extends Controller
             });
             $form->image('pic');
             $form->editor('content');
-            $form->hidden('user_id')->value(1);
-            $form->hidden('like_id')->value(1);
-
+            $form->hidden('user_id')->value(0);
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });

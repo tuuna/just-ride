@@ -31,4 +31,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Article::class);
     }
+
+    public function likes()
+    {
+        return $this->belongsToMany(Article::class,'likes')->withTimestamps();
+    }
+
+    public function likeFor($articleId)
+    {
+        return $this->likes()->toggle($articleId);
+    }
+
+    public function hasLiked($articleId)
+    {
+        return !! $this->likes()->where('article_id',$articleId)->count();
+    }
 }

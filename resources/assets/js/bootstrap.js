@@ -39,6 +39,13 @@ require('./z700bike_single');
  */
 
 window.Vue = require('vue');
+require('vue-resource');
+Vue.http.interceptors.push((request, next) => {
+    request.headers.set('Authorization',Laravel.apiToken);
+
+next();
+});
+
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

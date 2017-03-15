@@ -1,12 +1,12 @@
 <template>
-    <span class="bartext voteid26536" v-bind:class="{'single_views_over':liked}><a href="#" id="aZanImg"></a></span>
+    <button class="btn btn-default" v-bind:class="{'btn-primary':liked}" v-text="text" v-on:click="like()"></button>
 </template>
 
 <script>
     export default{
-        props:['user_id'],
+        props:['article_id'],
         mounted() {
-            this.$http.post('/api/like/' + this.user_id)
+            this.$http.post('/api/like/' + this.article_id)
                 .then(response => {
                     this.liked = response.data.liked
                 })
@@ -16,9 +16,15 @@
                 liked: false
             }
         },
+        computed: {
+            text() {
+                return this.liked ?
+                            '赞' : '取消赞'
+            }
+        },
         methods:{
             like() {
-                this.$http.post('/api/user/like',{'user_id':this.user_id})
+                this.$http.post('/api/user/like',{'article_id':this.article_id})
                     .then(response => {
                         this.liked = response.data.liked
                     })

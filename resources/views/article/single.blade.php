@@ -22,6 +22,7 @@
                                 {!! $details[0]['content'] !!}
                                 <center id="pagenav">
                                 </center>
+
                                 <div id="BottomNavOver" style="height: 80px;">
                                     <div style="float: left; font-size: 12px;">
 
@@ -78,20 +79,25 @@
                     </div>
                 </div>
             </div>
+
             <div id="sidebar">
-                <div class="widget single" style="margin-bottom: 0px; margin-left: 0px; margin-top: 40px;
+
+                <like-button article_id="{{ $details[0]['id'] }}"></like-button>
+                {{--<div class="widget single" style="margin-bottom: 0px; margin-left: 0px; margin-top: 40px;
                     padding-bottom: 0px;" id="newdigg">
-                    <div class="single_views" onmouseout="ILike(this,false)" onmouseover="ILike(this,true)">
-                        <span class="textcontainer"><span class="votecount26536">{{ $details[0]['favor_count'] }}</span></span>
-                        {{--<like-button></like-button>--}}
-                        {{--<span class="bartext voteid26536"><a href="#"--}}
-                                                             {{--id="aZanImg" onclick="javascript:postDigg('good',382)"></a></span>--}}
-                        <span class="text" id="spanZan">赞</span>
-                        <span class="text love">人</span>
-                    </div>
+                    --}}{{--<div class="single_views"">--}}{{--
+
+                    <span class="textcontainer"><span class="votecount26536">{{ $details[0]['favor_count'] }}</span></span>
+
+                    --}}{{--<span class="bartext voteid26536"><a href="#"--}}{{--
+                    --}}{{--id="aZanImg" onclick="javascript:postDigg('good',382)"></a></span>--}}{{--
+                    <span class="text" id="spanZan">赞</span>
+                    <span class="text love">人</span>
+
+                    --}}{{--</div>--}}{{--
 
 
-                </div>
+                </div>--}}
                 <!-- 右侧 -->
 
 
