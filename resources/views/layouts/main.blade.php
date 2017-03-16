@@ -72,6 +72,9 @@
                             </li>
                         </ul>
                     </li>
+                    <button class="btn btn-primary glyphicon glyphicon-bell" type="button">
+                        消息 <span class="badge">4</span>
+                    </button>
                 @endif
 
             </ul>
