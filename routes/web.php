@@ -34,3 +34,5 @@ Route::post('create-item', ['as'=>'create-item','uses'=>'ItemSearchController@cr
 Route::get('email/verify/{token}',['as' => 'email.verify', 'uses' => 'EmailController@verify']);
 
 Route::get('/write','WriteArticleController@index');
+
+Route::post('/write/new','WriteArticleController@new');

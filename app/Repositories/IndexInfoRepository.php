@@ -18,6 +18,11 @@ class IndexInfoRepository
         return $this->tree(Cate::get());
     }
 
+    public function allCategories()
+    {
+        return Cate::get();
+    }
+
     public function tree($data,$name='child',$parent_id = 0)
     {
         $arr = array();

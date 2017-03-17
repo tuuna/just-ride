@@ -18,4 +18,9 @@ class AppController extends Controller
     {
         return $this->categories->getAllCategories();
     }
+
+    public function allCategories()
+    {
+        return $this->categories->allCategories();
+    }
 }

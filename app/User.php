@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return !! $this->likes()->where('article_id',$articleId)->count();
     }
+
+    public function Messages()
+    {
+        return $this->hasMany(Message::class,'to_user_id');
+    }
 }

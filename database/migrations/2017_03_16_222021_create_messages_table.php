@@ -15,6 +15,11 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('from_user_id');
+            $table->integer('to_user_id');
+            $table->text('body');
+            $table->string('has_read',8)->default('F');
+            $table->timestamp('read_at')->nullable();
             $table->timestamps();
         });
     }

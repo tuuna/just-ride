@@ -1,19 +1,3 @@
-{{--<script>
-    function subForm()
-    {
-
-        formsearch.submit();
-        //form1为form的id
-    }
-</script>
-<script type="text/javascript">
-    function showMask() {
-        $("#mask").css("height", $(document).height());
-        $("#mask").css("width", $(document).width());
-        $("#mask").show();
-    }
-</script>
-<div id="mask" class="mask" onclick="CloseMask()"></div>--}}
 @extends('layouts.main')
 @section('content')
 <div id="xh_wrapper">
@@ -25,13 +9,13 @@
                 <div id="picshow">
                     <div id="picshow_img">
                         <ul>
-                            <li style="display: list-item;"><a href="/life/361.html" target="_blank">
+                            <li style="display: list-item;"><a href="#" target="_blank">
                                     <img src="images/1-140206162449A0.jpg" alt="骑行40000公里 英国胶片摄影师的骑游之旅"></a></li>
-                            <li style="display: list-item;"><a href="/life/394.html" target="_blank">
+                            <li style="display: list-item;"><a href="#" target="_blank">
                                     <img src="images/354.jpg" alt="骑看世界：春节骑行海南岛 畅游冬日骑行天堂"></a></li>
-                            <li style="display: list-item;"><a href="/life/364.html" target="_blank">
+                            <li style="display: list-item;"><a href="#" target="_blank">
                                     <img src="images/1-1402061A315209.jpg" alt="隆猫西班牙自行车之旅-Mallorca岛梦幻旅程（上）"></a></li>
-                            <li style="display: list-item;"><a href="/gear/rs/320.html" target="_blank">
+                            <li style="display: list-item;"><a href="#" target="_blank">
                                     <img src="images/1-1402061A155W4.jpg" alt="#CES展上的新玩意# Casio 发布 STB-1000 智能手表 可同步骑行速"></a></li>
 
 
@@ -52,7 +36,7 @@
                     <div id="focus-right" class="arrow-right"></div></div>
             </div>
             <div id="picshow_right">
-                <a href="/life/416.html" target="_blank">
+                <a href="#" target="_blank">
                     <img src="images/1-140206160415Y6.jpg" alt="COACH再度携手王力宏 踩单车演" width="255px" height="420px"></a>
 
                 <div id="picshow_right_cover" onclick="goanewurl()" style="cursor:pointer;position:absolute;top:495px;font-size:14px;width:213px;height:45px;line-height:45px;padding-left:42px;color:#ffffff;zoom:1;background-image:url(images/focus-left-bg.png); background-repeat:no-repeat; background-color:#01A1ED;"></div>
@@ -108,7 +92,7 @@
             <div class="widget portrait">
                 <div>
                     <div class="textwidget">
-                        <a href="/tougao.html"><img src="images/tg.jpg" alt="投稿"></a><br><br>
+                        <a href="{{ url('/write') }}"><img src="images/tg.jpg" alt="投稿"></a><br><br>
                     </div>
                 </div>
             </div>
