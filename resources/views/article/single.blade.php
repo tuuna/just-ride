@@ -118,11 +118,4 @@
         </div>
     </div>
 </div>
-    <script>
-
-            $("#message_button").click( function() {
-                $("#modal-send-message").modal('show');
-            });
-
-    </script>
 @endsection

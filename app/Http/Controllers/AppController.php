@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\IndexInfoRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AppController extends Controller
 {
@@ -22,5 +23,12 @@ class AppController extends Controller
     public function allCategories()
     {
         return $this->categories->allCategories();
+    }
+
+    public function messageCount()
+    {
+        return Auth::check() ?
+                 Auth::user()->messages->count() :
+                 '';
     }
 }

@@ -72,9 +72,12 @@
                             </li>
                         </ul>
                     </li>
-                    <button class="btn btn-primary glyphicon glyphicon-bell" type="button">
-                        消息 <span class="badge">4</span>
-                    </button>
+                    <li>
+                    <a href="/inbox" class="btn btn-primary ">
+
+                            消息 <span class="badge">{{ $messageCount }}</span>
+                        </a>
+                    </li>
                 @endif
 
             </ul>

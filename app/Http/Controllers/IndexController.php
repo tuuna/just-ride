@@ -6,6 +6,7 @@ use App\Article;
 use App\Cate;
 use App\Repositories\IndexInfoRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class IndexController extends AppController
 {
@@ -25,6 +26,12 @@ class IndexController extends AppController
         $categories = $this->parent();
         $listInfo = Article::all()->toArray();
         $newest = array_slice(array_reverse($listInfo),0,4);
-        return view('home.index',['categories' => $categories,'articles' => $articles,'newest' => $newest]);
+        if(Auth::check()) {
+
+            $messageCount = Auth::user()->messages->count();
+        } else {
+            $messageCount = '';
+        }
+        return view('home.index',['categories' => $categories,'articles' => $articles,'newest' => $newest,'messageCount' => $messageCount]);
     }
 }

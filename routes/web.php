@@ -39,3 +39,6 @@ Route::post('/write/new','WriteArticleController@new');
 
 Route::get('/message/to/{id}','WriteMessageController@index');
 Route::post('/message/sent','WriteMessageController@sent');
+
+Route::get('inbox','InboxController@index');
+Route::get('/inbox/{userId}','InboxController@show');

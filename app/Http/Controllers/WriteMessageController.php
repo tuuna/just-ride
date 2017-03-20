@@ -15,6 +15,7 @@ class WriteMessageController extends AppController
         return view('message.sendCertainMessage',['categories' => $categories,'userInfo' => $toUser]);
     }
 
+
     public function sent(Request $request)
     {
         Message::create([
