@@ -1,44 +1,26 @@
 @extends('layouts.main')
+@include('vendor.ueditor.assets')
+
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">收信人：</div>
+                    <div class="panel-heading">收信人：{{ $userInfo->name }}</div>
                     <div class="panel-body">
-                        <form action="/write/new" method="post">
+                        <form action="/message/sent" method="post">
                             {!! csrf_field() !!}
-                            <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
-                                <label for="title">标题</label>
-                                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-                                <input type="hidden" name="author" value="{{ Auth::user()->name }}">
-                                <input type="text" name="title" id="title" class="form-control" placeholder="输入标题" value="{{old('title')}}">
-                                @if ($errors->has('title'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('title') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-
-                            <div class="form-group">
-                                <label for="category">所属分类</label>
-                                <select class="form-control" name="cate_id">
-                                    @foreach($allCategories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->title }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-
-
                             <div class="form-group">
                                 <label for="body">内容</label>
-                                <script id="container" name="content" type="text/plain">
-                                    {!! old('content') !!}
+                                <input type="hidden" name="from_user_id" value="{{ Auth::user()->id }}">
+                                <input type="hidden" name="to_user_id" value="{{ $userInfo->id }}">
+                                <script id="container" name="body" type="text/plain">
+                                    {!! old('body') !!}
 
                                 </script>
-                                @if ($errors->has('content'))
+                                @if ($errors->has('body'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('content') }}</strong>
+                                        <strong>{{ $errors->first('body') }}</strong>
                                     </span>
                                 @endif
                             </div>

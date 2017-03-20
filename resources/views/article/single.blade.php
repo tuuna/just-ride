@@ -101,7 +101,7 @@
                 <!-- 右侧 -->
 
                 <div class="group-control">
-                    <button class="btn btn-primary">发生私信</button>
+                    <a class="btn btn-primary" href="{{ url('message/to/'. $userId ) }}">发送私信</a>
                 </div>
                 <div class="widget portrait">
                     <div>

@@ -36,3 +36,6 @@ Route::get('email/verify/{token}',['as' => 'email.verify', 'uses' => 'EmailContr
 Route::get('/write','WriteArticleController@index');
 
 Route::post('/write/new','WriteArticleController@new');
+
+Route::get('/message/to/{id}','WriteMessageController@index');
+Route::post('/message/sent','WriteMessageController@sent');
