@@ -31,6 +31,7 @@ class InboxController extends AppController
     {
         $messages = Message::where('dialog_id',$dialogId)->latest()->get();
 //        dd($messages->groupBy('to_user_id'));
+        $messages->markAsRead();
         $categories = $this->parent();
         $messageCount = $this->messageCount();
         return view('inbox.show',['messages' => $messages->groupBy('to_user_id'),'dialogId' => $dialogId,'categories' => $categories,'messageCount' => $messageCount]);

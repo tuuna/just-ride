@@ -28,7 +28,7 @@ class AppController extends Controller
     public function messageCount()
     {
         return Auth::check() ?
-                 Auth::user()->messages->count() :
+                 Auth::user()->messages->where('has_read','F')->count() :
                  '';
     }
 }
