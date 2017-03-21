@@ -13,7 +13,11 @@ class ArticleController extends AppController
         $details = Article::with('cate')->where('id',$id)->get()->toArray();
         $userId = Article::with('user')->where('id',$id)->first()->user->id;
         $categories = $this->parent();
+        $messageCount = $this->messageCount();
         Article::find($id)->increment('click_count');
-        return view('article.single',['details' => $details,'categories' => $categories,'userId' => $userId]);
+        return view('article.single',['details' => $details,
+                                        'categories' => $categories,
+                                            'userId' => $userId,
+                                                'messageCount' => $messageCount]);
     }
 }
