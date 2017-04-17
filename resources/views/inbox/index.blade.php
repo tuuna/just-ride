@@ -1,5 +1,11 @@
 @extends('layouts.main')
 @section('content')
+    <style>
+        .media-unread {
+            background-color: #dadada;
+            opacity: 0.1%;
+        }
+    </style>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -10,7 +16,7 @@
                 </div>
                 <div class="panel-body">
                     @foreach($messages as $key => $messageGroup)
-                        <div class="media">
+                        <div class="media media-{{ $messageGroup->last()->shouldAddReadClass() ? 'unread' : '' }}">
                             <div class="media-left">
                                 <h2>
                                     {{ $messageGroup->first()->id }}

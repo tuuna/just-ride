@@ -11,7 +11,7 @@ class ArticleController extends AppController
     public function show($id)
     {
         $details = Article::with('cate')->where('id',$id)->get()->toArray();
-        $userId = Article::with('user')->where('id',$id)->first()->user->id;
+        $userId = Article::with('user')->where('id',$id)->first()->user_id;
         $categories = $this->parent();
         $messageCount = $this->messageCount();
         Article::find($id)->increment('click_count');

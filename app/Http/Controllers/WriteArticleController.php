@@ -3,15 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Repositories\IndexInfoRepository;
 use Illuminate\Http\Request;
 
 class WriteArticleController extends AppController
 {
+    public function __construct(IndexInfoRepository $categories)
+    {
+        parent::__construct($categories);
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $categories = $this->parent();
         $allCategories = $this->allCategories();
-        return view('write.index',['categories' => $categories,'allCategories' => $allCategories]);
+        $messageCount = $this->messageCount();
+        return view('write.index',['messageCount' => $messageCount,'categories' => $categories,'allCategories' => $allCategories]);
     }
 
     public function new(Request $request)

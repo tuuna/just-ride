@@ -21,7 +21,8 @@
         Laravel.apiToken = "{{ Auth::check() ? 'Bearer '.Auth::user()->api_token : 'Bearer ' }}"
     </script>
 </head>
-<body class="xh_body" >
+<div id="app">
+<div class="xh_body" >
 <div id="header_wrap">
     <div id="header">
         {{--<div style="float: left; width: 310px;">--}}
@@ -86,7 +87,7 @@
 
 
         </div>
-        <div style="float: right; width: 209px;">
+       {{-- <div style="float: right; width: 209px;">
             <div class="widget" style="height: 30px; padding-top: 20px;">
                 <div style="float: left;">
                     <form  name="formsearch" action="/plus/search.php"><input type="hidden" name="kwtype" value="0" />
@@ -105,7 +106,7 @@
 
         </div>
 
-    </div>
+    </div>--}}
 </div>
 
 </div>
@@ -133,6 +134,7 @@
     </div>
     <div style="display: none;" id="scroll">
     </div>
+</div>
 <!-- Scripts -->
 @yield('js')
 <script src="{{ asset('js/app.js') }}"></script>
